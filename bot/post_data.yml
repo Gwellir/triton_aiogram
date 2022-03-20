@@ -1,0 +1,69 @@
+button_presets:
+  link1:
+    text: КВАРТА
+    url: https://n446773.yclients.com/company:423526?o=m1233780
+  link2:
+    text: КВИНТА
+    url: https://n446773.yclients.com/company:423526?o=m1273231
+  link3:
+    text: ТРИТОН
+    url: https://n446773.yclients.com/company:423526?o=m1273259
+
+drafts:
+  start:
+    text: "Нажмите 'Начать', чтобы создать пост для размещения в канале."
+    inline_keyboard:
+      -
+        - text: Начать
+          callback_data: restart
+  get_media:
+    text: 'Загрузите изображение или видео к посту, или нажмите "Далее":'
+    inline_keyboard:
+      -
+        - text: Далее
+          callback_data: continue
+    mods:
+      error:
+        not_media: Медиафайл не обнаружен!
+  get_text:
+    text: "Пожалуйста, введите текст поста:"
+    max_length: 1024
+    mods:
+      error:
+        not_text: Текст не введён!
+        text_too_long: Текст с фото не может быть длиннее 1024 символов!
+  add_buttons:
+    text: 'Добавьте кнопки к посту, а затем нажмите "Далее"
+
+
+      способы
+
+      - Нажать одну из кнопок
+
+      - Ввести одной строкой описание ссылки и ссылку прямым текстом
+
+      - Ввести <a href="https://тестовая-ссылка.рф">телеграм-ссылку</a>'
+    mods:
+      error:
+        not_link: Ссылка не обнаружена!
+      done: Кнопка {} добавлена!
+    inline_keyboard:
+      -
+        - text: Далее
+          callback_data: continue
+  check_data:
+    text: 'Так будет выглядеть ваше сообщение.
+
+      Разместить?'
+    inline_keyboard:
+      -
+        - text: ✅ Публикуем
+          callback_data: final_confirm
+        - text: ❌ Заново
+          callback_data: restart
+  done:
+    text: Пост размещён!
+    inline_keyboard:
+      -
+        - text: Разместить ещё
+          callback_data: restart
