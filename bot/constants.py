@@ -3,7 +3,7 @@ import yaml
 with open("bot/post_data.yml") as f:
     DATA = yaml.safe_load(f)
 
-BUTTON_PRESETS: dict[str, dict[str, str]] = DATA.get("button_presets")
+BUTTON_PRESETS: list[list[dict[str, str]]] = DATA.get("button_presets")
 
 DRAFTS = DATA.get("drafts")
 
