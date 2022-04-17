@@ -19,6 +19,14 @@ def process_webhook():
     return Response(status=200)
 
 
+@app.route("/")
+def set_webhook():
+    asyncio.run(bot.set_webhook(f"{config.WEBHOOK_ADDRESS}{config.WEBHOOK_PATH}"))
+    return Response(status=200)
+
+
 @app.route("/drop_webhook")
 def drop_webhook():
     asyncio.run(bot.delete_webhook())
+
+    return Response(status=201)
