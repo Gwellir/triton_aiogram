@@ -50,7 +50,7 @@ async def make_state_message(
     inline_buttons: list = None,
     error: str = None,
     done: str = None,
-) -> dict | None:
+) -> dict:
     _, name = await get_state_name(state)
     data = DRAFTS.get(name)
 
