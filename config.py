@@ -25,3 +25,5 @@ ALLOWED_USERS = []
 WEBHOOK_ADDRESS = os.getenv("WEBHOOK_ADDRESS")
 WEBHOOK_PORT = int(os.getenv("WEBHOOK_PORT"))
 WEBHOOK_PATH = os.getenv("WEBHOOK_PATH")
+
+USE_PROXY = os.getenv("USE_PROXY")
