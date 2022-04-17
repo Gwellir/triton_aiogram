@@ -2,26 +2,12 @@ import asyncio
 import logging
 import sys
 
-from aiogram import Bot, Dispatcher, Router
-from aiogram.dispatcher.fsm.storage.memory import MemoryStorage
-
 import config
-from bot.router import add_handlers
+from bot.launcher import setup_bot
 
 
-async def main():
-    bot = Bot(token=config.TELEGRAM_TOKEN, parse_mode="HTML")
-    storage = MemoryStorage()
+logging.basicConfig(level=logging.INFO, stream=sys.stdout)
 
-    dp = Dispatcher(storage)
+bot, dp = setup_bot()
 
-    form_router = Router()
-    add_handlers(form_router)
-    dp.include_router(form_router)
-
-    await dp.start_polling(bot)
-
-
-if __name__ == "__main__":
-    logging.basicConfig(level=logging.INFO, stream=sys.stdout)
-    asyncio.run(main())
+asyncio.run(bot.set_webhook(f"{config.WEBHOOK_ADDRESS}{config.WEBHOOK_PATH}"))

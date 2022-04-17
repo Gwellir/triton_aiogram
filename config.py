@@ -21,3 +21,7 @@ else:
 DEV_TG_ID = os.getenv("DEV_TG_ID")
 
 ALLOWED_USERS = []
+
+WEBHOOK_ADDRESS = os.getenv("WEBHOOK_ADDRESS")
+WEBHOOK_PORT = int(os.getenv("WEBHOOK_PORT"))
+WEBHOOK_PATH = os.getenv("WEBHOOK_PATH")
