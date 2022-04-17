@@ -24,6 +24,7 @@ drafts:
     mods:
       error:
         not_media: Медиафайл не обнаружен!
+      done: Файл загружен
   get_text:
     text: "Пожалуйста, введите текст поста:"
     max_length: 1024

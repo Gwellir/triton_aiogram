@@ -9,8 +9,14 @@ dotenv_file = BASE_DIR / ".env"
 if os.path.isfile(dotenv_file):
     dotenv.load_dotenv(dotenv_file)
 
-TELEGRAM_TOKEN = os.getenv("TELEGRAM_TOKEN")
-TESTING_CHANNEL_ID = os.getenv("TESTING_CHANNEL_ID")
+DEBUG = bool(int(os.getenv("DEBUG")))
+
+if DEBUG:
+    TELEGRAM_TOKEN = os.getenv("TELEGRAM_TOKEN_TEST")
+    CHANNEL_ID = os.getenv("TESTING_CHANNEL_ID")
+else:
+    TELEGRAM_TOKEN = os.getenv("TELEGRAM_TOKEN")
+    CHANNEL_ID = os.getenv("LIVE_CHANNEL_ID")
 
 DEV_TG_ID = os.getenv("DEV_TG_ID")
 
