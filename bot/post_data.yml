@@ -1,13 +1,12 @@
 button_presets:
-  link1:
-    text: КВАРТА
-    url: https://n446773.yclients.com/company:423526?o=m1233780
-  link2:
-    text: КВИНТА
-    url: https://n446773.yclients.com/company:423526?o=m1273231
-  link3:
-    text: ТРИТОН
-    url: https://n446773.yclients.com/company:423526?o=m1273259
+  -
+    - text: Забронировать
+      url: https://n446773.yclients.com/company:423526
+    - text: VK
+      url: https://vk.com/tritonstudio
+  -
+    - text: Связь с менеджером
+      url: https://t.me/TritonStudio
 
 drafts:
   start:
@@ -25,6 +24,7 @@ drafts:
     mods:
       error:
         not_media: Медиафайл не обнаружен!
+      done: Файл загружен
   get_text:
     text: "Пожалуйста, введите текст поста:"
     max_length: 1024

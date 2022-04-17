@@ -6,6 +6,5 @@ class ChannelPostForm(StatesGroup):
     welcome = State()
     get_media = State()
     get_text = State()
-    add_buttons = State()
     check_data = State()
     done = State()
